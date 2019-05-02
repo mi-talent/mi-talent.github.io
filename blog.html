@@ -23,7 +23,20 @@
   </head>
   <body>
     <div class="cursor"><span class="cursor__icon cursor__icon_default"></span><img class="cursor__icon cursor__icon_grab" src="static/svg/drag.svg" alt="cursor"><img class="cursor__icon cursor__icon_arrow" src="static/svg/arrow.svg" alt="cursor"><span class="cursor__icon cursor__icon_play">Play</span></div>
-
+    <nav class="main-nav" id="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0s;"><a class="main-nav__link" href="blog.html"><span class="main-nav__item-text">Blog</span><span class="main-nav__item-number">00</span><span class="main-nav__item-line" style="transition-delay: 0s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.3s;"><a class="main-nav__link" href="news.html"><span class="main-nav__item-text">News</span><span class="main-nav__item-number">01</span><span class="main-nav__item-line" style="transition-delay: 0.3s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.6s;"><a class="main-nav__link" href="#"><span class="main-nav__item-text">Contacts</span><span class="main-nav__item-number">02</span><span class="main-nav__item-line" style="transition-delay: 0.6s;"></span></a></div>
+        </li>
+      </ul>
+      <button class="toggle-navigation-btn toggle-navigation-btn_closed interactive main-nav__close-btn" type="button" data-cursor="circle" id="main-nav-close-btn"><span class="hidden-text">Close navigation</span><span class="toggle-navigation-btn__line"></span></button>
+    </nav>
 <div id="barba-wrapper">
 <div class="barba-container" data-namespace="blog">
 <div class="blog">
@@ -181,7 +194,8 @@
 </div>
 </div>
 </div>
-<script src="js/libs/libs.js"></script>
+<div class="barba-overlay"></div>
+<script src="static/js/libs.js"></script>
 <script src="static/js/main.js"></script>
 </body>
 </html>

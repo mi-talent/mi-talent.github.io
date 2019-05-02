@@ -23,229 +23,290 @@
   </head>
   <body>
     <div class="cursor"><span class="cursor__icon cursor__icon_default"></span><img class="cursor__icon cursor__icon_grab" src="static/svg/drag.svg" alt="cursor"><img class="cursor__icon cursor__icon_arrow" src="static/svg/arrow.svg" alt="cursor"><span class="cursor__icon cursor__icon_play">Play</span></div>
-
+    <nav class="main-nav" id="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0s;"><a class="main-nav__link" href="blog.html"><span class="main-nav__item-text">Blog</span><span class="main-nav__item-number">00</span><span class="main-nav__item-line" style="transition-delay: 0s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.3s;"><a class="main-nav__link" href="news.html"><span class="main-nav__item-text">News</span><span class="main-nav__item-number">01</span><span class="main-nav__item-line" style="transition-delay: 0.3s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.6s;"><a class="main-nav__link" href="#"><span class="main-nav__item-text">Contacts</span><span class="main-nav__item-number">02</span><span class="main-nav__item-line" style="transition-delay: 0.6s;"></span></a></div>
+        </li>
+      </ul>
+      <button class="toggle-navigation-btn toggle-navigation-btn_closed interactive main-nav__close-btn" type="button" data-cursor="circle" id="main-nav-close-btn"><span class="hidden-text">Close navigation</span><span class="toggle-navigation-btn__line"></span></button>
+    </nav>
     <div id="barba-wrapper">
     <div class="barba-container" data-namespace="news">
-    <div class="news">
-      <div class="cursor"><span class="cursor__icon cursor__icon_default"></span><img class="cursor__icon cursor__icon_grab" src="static/svg/drag.svg" alt="cursor"><img class="cursor__icon cursor__icon_arrow" src="static/svg/arrow.svg" alt="cursor"><span class="cursor__icon cursor__icon_play">Play</span></div>
-      <div class="wrapper">
-        <header class="header news__header"><img class="logo header__logo" src="static/svg/logo.png">
-          <div class="header__panel">
-            <div class="header__search-form search-form">
-              <div class="search-form__overlay interactive" data-cursor="circle"><img class="search-form__overlay-icon form__icon" src="static/svg/search.svg" alt="search icon"></div>
-              <form class="form form_size_sm search-form__block-form">
-                <input class="interactive form__input" type="search" placeholder="Search" name="main-search" data-cursor="hidden">
-                <button class="form__btn interactive" type="submit" data-cursor="circle"><img class="form__icon" src="static/svg/search.svg" alt="search icon"></button>
-              </form>
+      <div class="news">
+        <div class="wrapper">
+          <header class="header news__header"><img class="logo header__logo" src="static/svg/logo.png">
+            <div class="header__panel">
+              <div class="header__search-form search-form">
+                <div class="search-form__overlay interactive" data-cursor="circle"><img class="search-form__overlay-icon form__icon" src="static/svg/search.svg" alt="search icon"></div>
+                <form class="form form_size_sm search-form__block-form">
+                  <input class="interactive form__input" type="search" placeholder="Search" name="main-search" data-cursor="hidden">
+                  <button class="form__btn interactive" type="submit" data-cursor="circle"><img class="form__icon" src="static/svg/search.svg" alt="search icon"></button>
+                </form>
+              </div>
+              <button class="toggle-navigation-btn header__sandwich interactive" type="button" data-cursor="circle" id="toggle-navigation-btn"><span class="hidden-text">Close navigation</span><span class="toggle-navigation-btn__line">       </span></button>
             </div>
-            <button class="toggle-navigation-btn header__sandwich interactive" type="button" data-cursor="dot" id="toggle-navigation-btn"><span class="hidden-text">Close navigation</span><span class="toggle-navigation-btn__line">       </span></button>
-          </div>
-        </header>
-        <div class="news__main-screen-blocks">
-          <div class="news__column news__column_size_lg interactive" data-cursor="dot" data-aos="fade-right" data-aos-duration="2000">
-            <div class="news__pic" style="background-image: url(static/img/content/puzzle/puzzle5.jpg);"></div>
-            <div class="news__text"><span class="news__title-suptitle link-suptitle">Featured news</span>
-              <h3 class="news__title link-text">A starter guide to self improvement</h3>
+          </header>
+          <div class="news__main-screen-blocks">
+            <div class="news__column news__column_size_lg interactive" data-cursor="arrow" data-aos="fade-right" data-aos-duration="2000">
+              <div class="news__pic-wrap">
+                <div class="news__pic" style="background-image: url(static/img/content/puzzle/puzzle5.jpg);"></div>
+              </div>
+              <div class="news__text"><span class="news__title-suptitle link-suptitle">Featured news</span>
+                <h3 class="news__title link-text">A starter guide to self improvement</h3>
+              </div>
+            </div>
+            <div class="news__column interactive" data-cursor="arrow" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
+              <div class="news__pic-wrap">
+                <div class="news__pic" style="background-image: url(static/img/content/puzzle/puzzle6.jpg);"></div>
+              </div>
+              <div class="news__text">
+                <h3 class="news__title link-text link-text_color_dark">Dream interpretation common symbols and their meanings</h3><span class="news__date link-date">8 march 2020</span>
+              </div>
+            </div>
+            <div class="news__column news__media-links interactive" data-cursor="dot" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1500">
+              <ul class="profile-media-links">
+                <li class="profile-media-links__item interactive" data-cursor="arrow"><a class="profile-media-links__link" href="#" target="_blank">
+                    <picture class="profile-media-links__prev">
+                      <source srcset="static/img/content/puzzle/puzzle7.jpg, static/img/content/puzzle/puzzle7.jpg 2x"/><img src="static/img/content/puzzle/puzzle7.jpg" alt="Burning desire golden key or red herring"/>
+                    </picture>
+                    <div class="profile-media-links__text-box">
+                      <p class="profile-media-links__text link-text link-text_color_dark">Burning desire golden key or red herring</p><span class="profile-media-links__date link-date">8 March, 2020</span>
+                    </div></a></li>
+                <li class="profile-media-links__item interactive" data-cursor="arrow"><a class="profile-media-links__link" href="#" target="_blank">
+                    <picture class="profile-media-links__prev">
+                      <source srcset="static/img/content/puzzle/puzzle8.jpg, static/img/content/puzzle/puzzle8.jpg 2x"/><img src="static/img/content/puzzle/puzzle8.jpg" alt="5 reasons to keep your beauty salon reservation"/>
+                    </picture>
+                    <div class="profile-media-links__text-box">
+                      <p class="profile-media-links__text link-text link-text_color_dark">5 reasons to keep your beauty salon reservation</p><span class="profile-media-links__date link-date">8 March, 2020</span>
+                    </div></a></li>
+                <li class="profile-media-links__item interactive" data-cursor="arrow"><a class="profile-media-links__link" href="#" target="_blank">
+                    <picture class="profile-media-links__prev">
+                      <source srcset="static/img/content/puzzle/puzzle9.jpg, static/img/content/puzzle/puzzle9.jpg 2x"/><img src="static/img/content/puzzle/puzzle9.jpg" alt="Motivation is the first step to succes"/>
+                    </picture>
+                    <div class="profile-media-links__text-box">
+                      <p class="profile-media-links__text link-text link-text_color_dark">Motivation is the first step to succes</p><span class="profile-media-links__date link-date">8 March, 2020</span>
+                    </div></a></li>
+                <li class="profile-media-links__item interactive" data-cursor="arrow"><a class="profile-media-links__link" href="#" target="_blank">
+                    <picture class="profile-media-links__prev">
+                      <source srcset="static/img/content/puzzle/puzzle7.jpg, static/img/content/puzzle/puzzle7.jpg 2x"/><img src="static/img/content/puzzle/puzzle7.jpg" alt="How to set intentions that energize you"/>
+                    </picture>
+                    <div class="profile-media-links__text-box">
+                      <p class="profile-media-links__text link-text link-text_color_dark">How to set intentions that energize you</p><span class="profile-media-links__date link-date">8 March, 2020</span>
+                    </div></a></li>
+              </ul>
             </div>
           </div>
-          <div class="news__column interactive" data-cursor="dot" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
-            <div class="news__pic" style="background-image: url(static/img/content/puzzle/puzzle6.jpg);"></div>
-            <div class="news__text">
-              <h3 class="news__title link-text link-text_color_dark">Dream interpretation common symbols and their meanings</h3><span class="news__date link-date">8 march 2020</span>
-            </div>
-          </div>
-          <div class="news__column news__media-links interactive" data-cursor="dot" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1500">
-            <ul class="profile-media-links">
-              <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
-                  <picture class="profile-media-links__prev">
-                    <source srcset="static/img/content/puzzle/puzzle7.jpg, static/img/content/puzzle/puzzle7.jpg 2x"/><img src="static/img/content/puzzle/puzzle7.jpg" alt="Burning desire golden key or red herring"/>
-                  </picture>
-                  <div class="profile-media-links__text-box">
-                    <p class="profile-media-links__text link-text link-text_color_dark">Burning desire golden key or red herring</p><span class="profile-media-links__date link-date">8 March, 2020</span>
-                  </div></a></li>
-              <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
-                  <picture class="profile-media-links__prev">
-                    <source srcset="static/img/content/puzzle/puzzle8.jpg, static/img/content/puzzle/puzzle8.jpg 2x"/><img src="static/img/content/puzzle/puzzle8.jpg" alt="5 reasons to keep your beauty salon reservation"/>
-                  </picture>
-                  <div class="profile-media-links__text-box">
-                    <p class="profile-media-links__text link-text link-text_color_dark">5 reasons to keep your beauty salon reservation</p><span class="profile-media-links__date link-date">8 March, 2020</span>
-                  </div></a></li>
-              <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
-                  <picture class="profile-media-links__prev">
-                    <source srcset="static/img/content/puzzle/puzzle9.jpg, static/img/content/puzzle/puzzle9.jpg 2x"/><img src="static/img/content/puzzle/puzzle9.jpg" alt="Motivation is the first step to succes"/>
-                  </picture>
-                  <div class="profile-media-links__text-box">
-                    <p class="profile-media-links__text link-text link-text_color_dark">Motivation is the first step to succes</p><span class="profile-media-links__date link-date">8 March, 2020</span>
-                  </div></a></li>
-              <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
-                  <picture class="profile-media-links__prev">
-                    <source srcset="static/img/content/puzzle/puzzle7.jpg, static/img/content/puzzle/puzzle7.jpg 2x"/><img src="static/img/content/puzzle/puzzle7.jpg" alt="How to set intentions that energize you"/>
-                  </picture>
-                  <div class="profile-media-links__text-box">
-                    <p class="profile-media-links__text link-text link-text_color_dark">How to set intentions that energize you</p><span class="profile-media-links__date link-date">8 March, 2020</span>
-                  </div></a></li>
+          <div class="news__portfolio-list">
+            <ul class="news__portfolio-list-tabs tabs">
+              <li class="tabs__item interactive" data-cursor="dot">
+                <button class="tabs__btn tabs__btn_active" type="button" data-tab="#">Actor</button>
+              </li>
+              <li class="tabs__item interactive" data-cursor="dot">
+                <button class="tabs__btn" type="button" data-tab="#">Musician</button>
+              </li>
+              <li class="tabs__item interactive" data-cursor="dot">
+                <button class="tabs__btn" type="button" data-tab="#">Comedian</button>
+              </li>
+              <li class="tabs__item interactive" data-cursor="dot">
+                <button class="tabs__btn" type="button" data-tab="#">Model</button>
+              </li>
             </ul>
-          </div>
-        </div>
-        <div class="news__portfolio-list">
-          <ul class="news__portfolio-list-tabs tabs">
-            <li class="tabs__item interactive" data-cursor="dot">
-              <button class="tabs__btn tabs__btn_active" type="button" data-tab="#">Actor</button>
-            </li>
-            <li class="tabs__item interactive" data-cursor="dot">
-              <button class="tabs__btn" type="button" data-tab="#">Musician</button>
-            </li>
-            <li class="tabs__item interactive" data-cursor="dot">
-              <button class="tabs__btn" type="button" data-tab="#">Comedian</button>
-            </li>
-            <li class="tabs__item interactive" data-cursor="dot">
-              <button class="tabs__btn" type="button" data-tab="#">Model</button>
-            </li>
-          </ul>
-          <div class="portfolio">
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio1.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+            <div class="portfolio">
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio1.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio2.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio2.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio3.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio3.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio4.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio4.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio5.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio5.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio6.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio6.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio7.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio7.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="portfolio__item portfolio__item_light">
-                      <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio1.jpg" alt="Keith Ruiz"></div>
-                      <div class="portfolio__item-descr">
-                        <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
-                            <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
-                              <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></a></div>
-                        <h4 class="portfolio__item-name">Keith Ruiz</h4>
-                        <p class="portfolio__item-text">comedian</p>
+                      <div class="portfolio__item portfolio__item_light">
+                        <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio1.jpg" alt="Keith Ruiz"></div>
+                        <div class="portfolio__item-descr">
+                          <div class="portfolio__item-btn-box"><a class="portfolio__item-btn" href="#">
+                              <svg class="icon icon-arrow portfolio__item-btn-icon" aria-hidden="true">
+                                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></a></div>
+                          <h4 class="portfolio__item-name">Keith Ruiz</h4>
+                          <p class="portfolio__item-text">comedian</p>
+                        </div>
                       </div>
-                    </div>
-          </div>
-        </div>
-        <section class="profile__section">
-          <div class="profile__title-panel">
-            <h3 class="profile__article-title profile__article-title_line section-title">Our clients</h3>
-          </div>
-          <div class="profile__text-panel">
-            <p class="profile__paragraph paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmond tempor incididunt ut labore et dolore magna aligua.</p><a class="profile__show-more show-more-btn interactive" href="#" data-cursor="dot"><span class="show-more-btn__text">Explore more </span>
-              <svg class="icon icon-arrow show-more-btn__icon" aria-hidden="true">
-                <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
-              </svg></a>
-          </div>
-        </section>
-        <div class="news__puzzle pic-puzzle">
-          <div class="pic-puzzle__column pic-puzzle__column_width_lg">
-            <div class="pic-puzzle__line">
-              <div class="pic-puzzle__small-block interactive" data-cursor="dot">
-                <div class="pic-puzzle__content-wrap">
-                  <div class="pic-puzzle__text pic-puzzle__text_accent">
-                    <h3 class="pic-puzzle__title link-text">Use your reset button to change your vibration</h3><span class="pic-puzzle__date link-date">8 march 2020</span>
-                  </div>
-                  <div class="pic-puzzle__pic" style="background-image: url(static/img/content/puzzle/puzzle1.jpg);"></div>
-                </div>
-              </div>
+              <button class="portfolio__show-more show-more-btn interactive" type="button" data-cursor="dot" id="showMore"><span class="show-more-btn__text">Show more </span></button>
             </div>
-            <div class="pic-puzzle__line">
-              <div class="pic-puzzle__small-block interactive" data-cursor="dot">
-                <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
-                  <div class="pic-puzzle__pic" style="background-image: url(static/img/content/puzzle/puzzle3.jpg);"></div>
-                  <div class="pic-puzzle__text">
-                    <h3 class="pic-puzzle__title link-text link-text_color_dark">Dream interpretation common symbols and their meanings </h3><span class="pic-puzzle__date link-date">8 march 2020</span>
+          </div>
+          <section class="profile__section">
+            <div class="profile__title-panel">
+              <h3 class="profile__article-title profile__article-title_line section-title">Our clients</h3>
+            </div>
+            <div class="profile__text-panel">
+              <p class="profile__paragraph paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmond tempor incididunt ut labore et dolore magna aligua.</p><a class="profile__show-more show-more-btn interactive" href="#" data-cursor="dot"><span class="show-more-btn__text">Explore more </span>
+                <svg class="icon icon-arrow show-more-btn__icon" aria-hidden="true">
+                  <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
+                </svg></a>
+            </div>
+          </section>
+          <div class="news__puzzle pic-puzzle">
+            <div class="pic-puzzle__column pic-puzzle__column_width_lg">
+              <div class="pic-puzzle__line">
+                <div class="pic-puzzle__small-block interactive" data-cursor="dot">
+                  <div class="pic-puzzle__content-wrap">
+                    <div class="pic-puzzle__text pic-puzzle__text_accent">
+                      <h3 class="pic-puzzle__title link-text">Use your reset button to change your vibration</h3><span class="pic-puzzle__date link-date">8 march 2020</span>
+                    </div>
+                    <div class="pic-puzzle__img-wrap">
+                      <div class="pic-puzzle__img" style="background-image: url(static/img/content/puzzle/puzzle1.jpg);"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="pic-puzzle__small-block interactive" data-cursor="dot">
-                <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
-                  <div class="pic-puzzle__pic" style="background-image: url(static/img/content/puzzle/puzzle4.jpg);"></div>
+              <div class="pic-puzzle__line">
+                <div class="pic-puzzle__small-block interactive" data-cursor="dot">
+                  <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
+                    <div class="pic-puzzle__img-wrap">
+                      <div class="pic-puzzle__img" style="background-image: url(static/img/content/puzzle/puzzle3.jpg);"></div>
+                    </div>
+                    <div class="pic-puzzle__text">
+                      <h3 class="pic-puzzle__title link-text link-text_color_dark">Dream interpretation common symbols and their meanings </h3><span class="pic-puzzle__date link-date">8 march 2020</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pic-puzzle__small-block interactive" data-cursor="dot">
+                  <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
+                    <div class="pic-puzzle__img-wrap">
+                      <div class="pic-puzzle__img" style="background-image: url(static/img/content/puzzle/puzzle4.jpg);"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pic-puzzle__column pic-puzzle__column_width_sm interactive" data-cursor="dot">
+              <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
+                <div class="pic-puzzle__img-wrap">
+                  <div class="pic-puzzle__img" style="background-image: url(static/img/content/puzzle/puzzle2.jpg);"></div>
+                </div>
+                <div class="pic-puzzle__text">
+                  <h3 class="pic-puzzle__title link-text link-text_color_dark">Motivation and your personal vision an anbeatable force</h3><span class="pic-puzzle__date link-date">8 march 2020</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="pic-puzzle__column pic-puzzle__column_width_sm interactive" data-cursor="dot">
-            <div class="pic-puzzle__content-wrap pic-puzzle__content-wrap_vertical">
-              <div class="pic-puzzle__pic" style="background-image: url(static/img/content/puzzle/puzzle2.jpg);"></div>
-              <div class="pic-puzzle__text">
-                <h3 class="pic-puzzle__title link-text link-text_color_dark">Motivation and your personal vision an anbeatable force</h3><span class="pic-puzzle__date link-date">8 march 2020</span>
+        </div>
+        <footer class="footer">
+          <div class="wrapper">
+            <div class="footer__line"><img class="logo footer__logo" src="static/svg/logo.png">
+              <div class="footer__sign-up-form form">
+                <input class="interactive form__input" type="text" data-cursor="hidden" placeholder="Sign up our newsletter" name="sign-up-newsletter">
+                <button class="form__btn interactive" type="submit" data-cursor="circle"><span class="hidden-text">Send form </span>
+                  <svg class="icon icon-letter form__icon" aria-hidden="true">
+                    <use xlink:href="static/svg/symbol/sprite.svg#letter"></use>
+                  </svg>
+                </button>
               </div>
             </div>
+            <div class="footer__line">
+              <div class="footer__social">
+                <ul class="social">
+                  <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="facebook">
+                      <svg class="icon icon-fb social__icon" aria-hidden="true">
+                        <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="instagram">
+                      <svg class="icon icon-instagram social__icon" aria-hidden="true">
+                        <use xlink:href="static/svg/symbol/sprite.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="youtube">
+                      <svg class="icon icon-youtube social__icon" aria-hidden="true">
+                        <use xlink:href="static/svg/symbol/sprite.svg#youtube"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="twitter">
+                      <svg class="icon icon-twitter social__icon" aria-hidden="true">
+                        <use xlink:href="static/svg/symbol/sprite.svg#twitter"></use>
+                      </svg></a></li>
+                </ul>
+              </div><small class="footer__copyright"> &copy; 2018 MI Talent. Designed by Tranmautritam for Miss impressions</small>
+            </div>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
-    </div>
-    </div>
-    <script src="js/libs/libs.js"></script>
+    <div class="barba-overlay"></div>
+    <script src="static/js/libs.js"></script>
     <script src="static/js/main.js"></script>
     </body>
     </html>

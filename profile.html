@@ -23,19 +23,33 @@
   </head>
   <body>
     <div class="cursor"><span class="cursor__icon cursor__icon_default"></span><img class="cursor__icon cursor__icon_grab" src="static/svg/drag.svg" alt="cursor"><img class="cursor__icon cursor__icon_arrow" src="static/svg/arrow.svg" alt="cursor"><span class="cursor__icon cursor__icon_play">Play</span></div>
+    <nav class="main-nav" id="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0s;"><a class="main-nav__link" href="blog.html"><span class="main-nav__item-text">Blog</span><span class="main-nav__item-number">00</span><span class="main-nav__item-line" style="transition-delay: 0s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.3s;"><a class="main-nav__link" href="news.html"><span class="main-nav__item-text">News</span><span class="main-nav__item-number">01</span><span class="main-nav__item-line" style="transition-delay: 0.3s;"></span></a></div>
+        </li>
+        <li class="main-nav__item-wrap">
+          <div class="main-nav__item interactive" data-cursor="arrow" style="transition-delay: 0.6s;"><a class="main-nav__link" href="#"><span class="main-nav__item-text">Contacts</span><span class="main-nav__item-number">02</span><span class="main-nav__item-line" style="transition-delay: 0.6s;"></span></a></div>
+        </li>
+      </ul>
+      <button class="toggle-navigation-btn toggle-navigation-btn_closed interactive main-nav__close-btn" type="button" data-cursor="circle" id="main-nav-close-btn"><span class="hidden-text">Close navigation</span><span class="toggle-navigation-btn__line"></span></button>
+    </nav>
 <div id="barba-wrapper">
 <div class="barba-container" data-namespace="profile">
   <section class="profile square">
     <header class="header">
       <div class="header__panel">
-        <button class="toggle-navigation-btn header__sandwich interactive" type="button" data-cursor="dot" id="toggle-navigation-btn"><span class="hidden-text">Close navigation </span><span class="toggle-navigation-btn__line"></span></button><a class="header__link interactive" href="#" data-cursor="dot">Clients</a><a class="header__link interactive" href="#" data-cursor="dot">News</a>
-      </div><img class="logo header__logo" src="static/svg/logo.png">
+        <button class="toggle-navigation-btn header__sandwich interactive" type="button" data-cursor="circle" id="toggle-navigation-btn"><span class="hidden-text">Close navigation </span><span class="toggle-navigation-btn__line"></span></button><a class="header__link interactive" href="blog.html" data-cursor="dot">Blog </a><a class="header__link interactive" href="news.html" data-cursor="dot">News</a>
+      </div><a class="header__logo" href="./"><img class="logo" src="static/svg/logo.png"></a>
       <div class="header__panel">
         <div class="header__search-form search-form">
-          <div class="search-form__overlay interactive"><img class="search-form__overlay-icon form__icon" src="static/svg/search.svg" alt="search icon"></div>
+          <div class="search-form__overlay interactive" data-cursor="circle"><img class="search-form__overlay-icon form__icon" src="static/svg/search.svg" alt="search icon"></div>
           <form class="form form_size_sm search-form__block-form">
-            <input class="form__input" type="search" placeholder="Search" name="main-search">
-            <button class="form__btn" type="submit"> <img class="form__icon" src="static/svg/search.svg" alt="search icon"></button>
+            <input class="interactive form__input" type="search" placeholder="Search" name="main-search" data-cursor="hidden">
+            <button class="form__btn interactive" type="submit" data-cursor="circle"> <img class="form__icon" src="static/svg/search.svg" alt="search icon"></button>
           </form>
         </div>
       </div>
@@ -55,14 +69,12 @@
           </div>
           <button class="video__pauseBtn video__pauseBtn_hidden interactive" type="button" title="pause" data-cursor="play" id="pauseBtn">||</button>
           <div class="video__poster" style="background-image: url(static/img/content/giorgina.jpg);"></div>
-          <video class="video__file" controls preload="auto" loop id="video">
-            <!-- <source src="static/video/testimonials-video.mp4" type="video/mp4"> -->
-          </video>
+          <video class="video__file" controls preload="auto" loop id="video"></video>
         </div>
       </div>
     </div>
     <div class="wrapper">
-      <section data-aos="fade-up" data-aos-duration="2000" class="profile__section">
+      <section class="profile__section" data-aos="fade-up" data-aos-duration="2000">
         <article class="profile__article">
           <div class="profile__article-pic">
             <picture>
@@ -72,16 +84,16 @@
           <div class="profile__article-text-wrap">
             <header class="profile__article-header">
               <ul class="profile__tabs tabs" id="tabs">
-                <li class="tabs__item">
+                <li class="interactive tabs__item" data-cursor="dot">
                   <button class="tabs__btn tabs__btn_active" type="button" data-tab="#">Profile</button>
                 </li>
-                <li class="tabs__item">
+                <li class="interactive tabs__item" data-cursor="dot">
                   <button class="tabs__btn" type="button" data-tab="#">Press</button>
                 </li>
-                <li class="tabs__item">
+                <li class="interactive tabs__item" data-cursor="dot">
                   <button class="tabs__btn" type="button" data-tab="#">Awards</button>
                 </li>
-                <li class="tabs__item">
+                <li class="interactive tabs__item" data-cursor="dot">
                   <button class="tabs__btn" type="button" data-tab="#">Creadits</button>
                 </li>
               </ul>
@@ -100,19 +112,19 @@
           </div>
           <div class="profile__social">
             <ul class="social">
-              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="dot" title="facebook">
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="facebook">
                   <svg class="icon icon-fb social__icon" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
                   </svg></a></li>
-              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="dot" title="instagram">
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="instagram">
                   <svg class="icon icon-instagram social__icon" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#instagram"></use>
                   </svg></a></li>
-              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="dot" title="youtube">
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="youtube">
                   <svg class="icon icon-youtube social__icon" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#youtube"></use>
                   </svg></a></li>
-              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="dot" title="twitter">
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="twitter">
                   <svg class="icon icon-twitter social__icon" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#twitter"></use>
                   </svg></a></li>
@@ -120,25 +132,25 @@
           </div>
         </article>
       </section>
-      <section data-aos="fade-up" data-aos-duration="2000" class="profile__section">
+      <section class="profile__section" data-aos="fade-up" data-aos-duration="2000">
         <div class="profile__text-panel profile__section_bg-color_black">
           <h3 class="profile__article-title profile__article-title_line section-title">Derek Anderson on press</h3>
           <ul class="profile__media-links profile-media-links">
-            <li class="profile-media-links__item"><a class="profile-media-links__link" href="#" target="_blank">
+            <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
                 <picture class="profile-media-links__prev">
                   <source srcset="static/img/content/portfolio/derek-anderson-link-pic.jpg, static/img/content/portfolio/derek-anderson-link-pic.jpg 2x"><img src="static/img/content/portfolio/derek-anderson-link-pic.jpg" alt="Derek Anderson">
                 </picture>
                 <div class="profile-media-links__text-box">
                   <p class="profile-media-links__text link-text">29 Mativational quotes for business and other work environments</p><span class="profile-media-links__date link-date">20 March, 2020</span>
                 </div></a></li>
-            <li class="profile-media-links__item"><a class="profile-media-links__link" href="#" target="_blank">
+            <li class="profile-media-links__item interactive" data-cursor="dot"><a class="profile-media-links__link" href="#" target="_blank">
                 <picture class="profile-media-links__prev">
                   <source srcset="static/img/content/portfolio/derek-anderson-link-pic.jpg, static/img/content/portfolio/derek-anderson-link-pic.jpg 2x"><img src="static/img/content/portfolio/derek-anderson-link-pic.jpg" alt="Derek Anderson">
                 </picture>
                 <div class="profile-media-links__text-box">
                   <p class="profile-media-links__text link-text link-text_color_accent">5 reasons to keep your beauty salon resevation</p><span class="profile-media-links__date link-date">8 March, 2020</span>
                 </div></a></li>
-          </ul><a class="profile__show-more show-more-btn show-more-btn_color_light" href="#"><span class="show-more-btn__text">Explore more </span>
+          </ul><a class="interactive profile__show-more show-more-btn show-more-btn_color_light" href="#" data-cursor="dot"><span class="show-more-btn__text">Explore more </span>
             <svg class="icon icon-arrow show-more-btn__icon" aria-hidden="true">
               <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
             </svg></a>
@@ -147,18 +159,18 @@
           <source srcset="static/img/content/portfolio/derek-anderson2.jpg, static/img/content/portfolio/derek-anderson2.jpg 2x"><img src="static/img/content/portfolio/derek-anderson2.jpg" alt="Derek Anderson">
         </picture>
       </section>
-      <section data-aos="fade-up" data-aos-duration="2000" class="profile__section">
+      <section class="profile__section" data-aos="fade-up" data-aos-duration="2000">
         <div class="profile__title-panel">
           <h3 class="profile__article-title profile__article-title_line section-title">Similar Clients</h3>
         </div>
         <div class="profile__text-panel">
-          <p class="profile__paragraph paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmond tempor incididunt ut labore et dolore magna aligua.</p><a class="profile__show-more show-more-btn" href="#"><span class="show-more-btn__text">Explore more </span>
+          <p class="profile__paragraph paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmond tempor incididunt ut labore et dolore magna aligua.</p><a class="profile__show-more show-more-btn" href="#"><span class="interactive show-more-btn__text" data-cursor="dot">Explore more </span>
             <svg class="icon icon-arrow show-more-btn__icon" aria-hidden="true">
               <use xlink:href="static/svg/symbol/sprite.svg#arrow"></use>
             </svg></a>
         </div>
       </section>
-      <div data-aos="fade-up" data-aos-duration="2000" class="profile__portfolio-slider portfolio js-portfolio-slider">
+      <div class="profile__portfolio-slider portfolio js-portfolio-slider" data-aos="fade-up" data-aos-duration="2000">
                 <div class="portfolio__item">
                   <div class="portfolio__item-pic"><img src="static/img/content/portfolio/portfolio1.jpg" alt="Keith Ruiz"></div>
                   <div class="portfolio__item-descr">
@@ -238,10 +250,46 @@
                 </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__line"><img class="logo footer__logo" src="static/svg/logo.png">
+          <div class="footer__sign-up-form form">
+            <input class="interactive form__input" type="text" data-cursor="hidden" placeholder="Sign up our newsletter" name="sign-up-newsletter">
+            <button class="form__btn interactive" type="submit" data-cursor="circle"><span class="hidden-text">Send form </span>
+              <svg class="icon icon-letter form__icon" aria-hidden="true">
+                <use xlink:href="static/svg/symbol/sprite.svg#letter"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="footer__line">
+          <div class="footer__social">
+            <ul class="social">
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="facebook">
+                  <svg class="icon icon-fb social__icon" aria-hidden="true">
+                    <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="instagram">
+                  <svg class="icon icon-instagram social__icon" aria-hidden="true">
+                    <use xlink:href="static/svg/symbol/sprite.svg#instagram"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="youtube">
+                  <svg class="icon icon-youtube social__icon" aria-hidden="true">
+                    <use xlink:href="static/svg/symbol/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link interactive" href="#" target="_blank" data-cursor="circle" title="twitter">
+                  <svg class="icon icon-twitter social__icon" aria-hidden="true">
+                    <use xlink:href="static/svg/symbol/sprite.svg#twitter"></use>
+                  </svg></a></li>
+            </ul>
+          </div><small class="footer__copyright"> &copy; 2018 MI Talent. Designed by Tranmautritam for Miss impressions</small>
+        </div>
+      </div>
+    </footer>
   </section>
 </div>
 </div>
-<script src="js/libs/libs.js"></script>
+<script src="static/js/libs.js"></script>
 <script src="static/js/main.js"></script>
 </body>
 </html>
