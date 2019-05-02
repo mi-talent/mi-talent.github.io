@@ -1,15 +1,16 @@
 ;
 document.addEventListener("DOMContentLoaded", function(){
-  makeCustomCursor();
-  makeMainScreenSlider();
-  makeNavigation();
-  makePortfolioSlider();
-  makeMediaLinksSlider();
-  customVideoControls();
-  appendVideoSrcBySize();
+  // makeCustomCursor();
+  // makeMainScreenSlider();
+  // makeNavigation();
+  // makePortfolioSlider();
+  // makeMediaLinksSlider();
+  // customVideoControls();
+  // appendVideoSrcBySize();
+
   barbaNavigation();
-  showSearchForm();
-  AOS.init();
+  // showSearchForm();
+  // AOS.init();
 });
 
 
@@ -467,6 +468,7 @@ function barbaNavigation(){
         appendVideoSrcBySize();
         makePortfolioSlider();
         showSearchForm();
+        makeNavigation();
         // addCustomCursorToSlick();
         AOS.init();
         // makeNavigation();
@@ -478,8 +480,9 @@ function barbaNavigation(){
         makeCustomCursor();
         makeMainScreenSlider();
         makeNavigation();
-        customVideoControls();
+        // customVideoControls();
         showSearchForm();
+        // addCustomCursorToSlick();
         AOS.init();
       }
   });
@@ -491,6 +494,7 @@ function barbaNavigation(){
         AOS.init();
         makeNavigation();
         showMorePics();
+        // barbaNavigation();
       }
   });
   var BlogPage = Barba.BaseView.extend({
