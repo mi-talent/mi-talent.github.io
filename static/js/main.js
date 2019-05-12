@@ -6,18 +6,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 //Screen Slider
-function makeMainScreenSlider(){
+function makeMainScreenSlider(index){
 // Params
 var mainSliderSelector = '.main-slider',
     navSliderSelector = '.nav-slider',
     interleaveOffset = 0.5,
-    direction;
+    initialSlide = index;
 
 
 // Main Slider
 var mainSliderOptions = {
       speed: 1000,
       direction: 'vertical',
+      initialSlide: initialSlide,
       watchSlidesProgress: true,
       mousewheel: {
         invert: true
@@ -73,6 +74,7 @@ var mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
 var navSliderOptions = {
       loopAdditionalSlides: 10,
       speed:1000,
+      initialSlide: initialSlide,
       direction: 'vertical',
       slidesPerView: 5,
       spaceBetween: 20,
@@ -305,7 +307,8 @@ function barbaNavigation(){
       scroll,
       barbaOverlay,
       screenWidth,
-      screenHeight;
+      screenHeight,
+      initialSlide;
   Barba.Dispatcher.on('linkClicked', function(el) {
       lastElementClicked = el;
       barbaOverlay = document.querySelector('.barba-overlay');
@@ -365,7 +368,7 @@ function barbaNavigation(){
       if(barbaOverlay) {
         barbaOverlay.classList.remove('barba-overlay_moveToTop');
         tl.fromTo(barbaOverlay, 1.3, {scaleY: 1}, {scaleY: 0});
-      };
+      }
       this.done();
     }
   });
@@ -380,6 +383,7 @@ function barbaNavigation(){
     zoom: function() {
       var deferred = Barba.Utils.deferred();
       container = document.querySelector('.barba-container');
+      initialSlide = container.getAttribute('data-slide');
       var tl = new TimelineMax({
         onComplete: function() {
           deferred.resolve();
@@ -418,7 +422,7 @@ function barbaNavigation(){
       namespace: 'mainPage',
       onEnterCompleted: function() {
         makeCustomCursor();
-        makeMainScreenSlider();
+        makeMainScreenSlider(initialSlide);
         makeNavigation();
         showSearchForm();
         AOS.init();
