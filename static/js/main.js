@@ -304,8 +304,8 @@ function barbaNavigation(){
       slideBg,
       scroll,
       barbaOverlay,
-      screenWidth = $(window).width(),
-      screenHeight = $(window).height();
+      screenWidth,
+      screenHeight;
   Barba.Dispatcher.on('linkClicked', function(el) {
       lastElementClicked = el;
       barbaOverlay = document.querySelector('.barba-overlay');
@@ -337,6 +337,8 @@ function barbaNavigation(){
         scroll = document.querySelector('.swiper-scrollbar');
         socialLinks = document.querySelector('.mainSlider__social');
         navSlides = document.querySelector('.mainSlider__navWrap');
+        screenWidth = $(window).width();
+        screenHeight = $(window).height();
 
         tl
         .to(socialLinks,.9,{ease: Expo.easeOut, left: -(screenWidth/100 * 5)}, 0)
