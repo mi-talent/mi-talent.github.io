@@ -149,7 +149,7 @@ var navBtn = document.getElementById('toggle-navigation-btn'),
     navItems = mainNav.querySelectorAll('.main-nav__item-wrap'),
     closeBtn = document.querySelector('.main-nav__close-btn'),
     screenToAnimation,
-    screenWidth = $(window).width();
+    screenWidth;
 navBtn.onclick = function() {
   var tl = new TimelineMax({
     onComplete: function() {
@@ -166,6 +166,7 @@ function closeNav(){
       mainNav.classList.remove('main-nav_show')
     }
   });
+  screenWidth = $(window).width();
   tlClose
   .to(mainNav, .5,{x: screenWidth * 1.2, opacity: 0}, '+=1')
 }
