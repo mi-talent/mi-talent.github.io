@@ -1124,8 +1124,7 @@ z-index: 300;
       overflow: hidden; }
       .portfolio__item-pic img {
         width: 100%;
-        height: auto;
-        min-height: 100%; }
+        height: auto; }
     .portfolio__item-descr {
       display: -ms-flexbox;
       display: flex;
